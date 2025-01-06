@@ -130,6 +130,12 @@ typeAndDelete();
 // Animation Group - For data-animate attribute
 const animatedElementsGroup = document.querySelectorAll('[data-animate]');
 
+// Function to get the correct threshold based on the screen size
+function getThreshold() {
+  // If the screen width is less than or equal to 768px (mobile or smaller devices), set threshold to 0.15
+  return window.innerWidth <= 768 ? 0.15 : 0.35;
+}
+
 // Create an Intersection Observer for the new elements
 const observerGroup = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
@@ -144,9 +150,29 @@ const observerGroup = new IntersectionObserver((entries, observer) => {
     }
   });
 }, {
-  threshold: 0.35 // Trigger when 35% of the element is visible
+  threshold: getThreshold() // Use the dynamic threshold
 });
 
 // Observe each animated element in the group
 animatedElementsGroup.forEach(element => observerGroup.observe(element));
 
+// Optionally, you can listen for window resizing to dynamically update the threshold if the screen size changes
+window.addEventListener('resize', () => {
+  // Re-initialize the observer with the new threshold value when the window is resized
+  observerGroup.disconnect(); // Disconnect the current observer
+  const newThreshold = getThreshold(); // Get the new threshold
+  const newObserverGroup = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const element = entry.target;
+        element.classList.add('animate');
+        observer.unobserve(element);
+      }
+    });
+  }, {
+    threshold: newThreshold
+  });
+
+  // Re-observe the elements with the new observer
+  animatedElementsGroup.forEach(element => newObserverGroup.observe(element));
+});
