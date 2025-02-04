@@ -2061,7 +2061,7 @@
           if (config.trim() !== '') {
             each(data, function (val, key) {
               var str = config;
-              var match = '\s?' + key + '\s?:\s?(.*?)(' + cleanKeys + '\s?:|$)';
+              var match = '\\s?' + key + '\\s?:\\s?(.*?)(' + cleanKeys + '\\s?:|$)';
               var regex = new RegExp(match);
               var matches = str.match(regex);
 
