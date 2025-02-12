@@ -4,7 +4,7 @@ window.location.href = 'tel:+919011913681';
 });
     
 // For Typing Effect
-const phrases = ["Data Analyst", "Data Scientist"]; 
+const phrases = ["AI/ML Engineer", "Data Scientist"]; 
 let currentPhraseIndex = 0; 
 let currentLetterIndex = 0; 
 let isDeleting = false; 
