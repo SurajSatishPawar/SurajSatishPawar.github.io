@@ -10746,4 +10746,94 @@ html {
 }
 
 
+/* Skills section modifications */
+
+/* Skills Container */
+#skillsContainer {
+  position: relative;
+  width: 90%;
+  max-width: 1300px; /* Larger width for PC */
+  height: auto;
+  margin: 30px auto;
+  border: 2px solid #9b4dca;
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  gap: 18px;
+  /* background: linear-gradient(145deg, #7b42f5, #9b4dca); /* Subtle gradient */
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Skill Box */
+.skill-box {
+  background: linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(209, 34, 227, 0.95));
+  color: white;
+  padding: 15px 25px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: fit-content;
+  max-width: 250px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgba(255, 255, 255, 0.1); /* 3D Shadow */
+  transform: perspective(100px) translateZ(5px); /* 3D effect */
+}
+
+/* Hover Effect */
+.skill-box:hover {
+  background: linear-gradient(145deg, #7a36a5, #5e2e96);
+  transform: scale(1.1) perspective(120px) translateZ(10px);
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3), -6px -6px 12px rgba(255, 255, 255, 0.1);
+}
+
+/* Active (Click) Effect */
+.skill-box:active {
+  transform: scale(0.95) perspective(120px) translateZ(2px);
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3), inset -2px -2px 5px rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  #skillsContainer {
+    width: 95%;
+    padding: 20px;
+  }
+  .skill-box {
+    font-size: 14px;
+    padding: 12px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .skill-box {
+    font-size: 13px;
+    padding: 10px 18px;
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  #skillsContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .skill-box {
+    width: auto;
+    max-width: 180px;
+    font-size: 12px;
+    padding: 8px 15px;
+  }
+}
+
+
+
 /*# sourceMappingURL=style.css.map */
+

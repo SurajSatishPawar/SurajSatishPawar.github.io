@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
       {
         title: "Employee Attrition Prediction Using Decision Tree",
         description: [
-           "Built a <strong>Decision Tree models</strong> to predict employee attrition using IBM HR Analytics dataset.",  
+           "Designed a <strong>Decision Tree models</strong> to predict employee attrition using IBM HR Analytics dataset.",  
             "Preprocessed and encoded data, optimized model performance, and visualized key decision factors.",  
             "Achieved <strong>88% accuracy</strong>, providing insights into employee retention and turnover trends."
         ],
