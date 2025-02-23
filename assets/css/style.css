@@ -10021,48 +10021,48 @@ progress {
   max-width: 100%;
 }
 
-.testimonials {
+.certifications {
   position: relative;
   padding: 0;
   background: linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(209, 34, 227, 0.95));
 }
-.testimonials__card {
+.certifications__card {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 2rem 1.25rem;
   border-radius: 0.625rem;
   height: auto;
   text-align: center;
 }
-.testimonials__card i {
+.certifications__card i {
   font-size: 1.5rem;
   color: rgba(153, 38, 240, 0.7);
 }
-.testimonials__card .ratings i {
+.certifications__card .ratings i {
   color: rgba(153, 38, 240, 0.7);
   font-size: 1rem;
 }
-.testimonials__picture {
+.certifications__picture {
   width: 6rem;
   height: 6rem;
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.testimonials__picture img {
+.certifications__picture img {
   border: 0.325rem solid rgba(153, 38, 240, 0.7);
 }
-.testimonials__name {
+.certifications__name {
   padding-top: 3rem;
   margin-bottom: 1rem;
   text-align: center;
   font-weight: 500;
   color: #fff;
 }
-.testimonials__name h3 {
+.certifications__name h3 {
   padding-top: 0.8rem;
   text-transform: capitalize;
 }
-.testimonials__name p {
+.certifications__name p {
   padding-bottom: 2rem;
   text-transform: capitalize;
 }
@@ -10713,19 +10713,19 @@ html {
 
 /* For mobile devices: ensure single row for certificates */
 @media (max-width: 576px) {
-  #testimonials .carousel .row > .col-lg-4, 
-  #testimonials .carousel .row > .col-md-6 {
+  #certifications .carousel .row > .col-lg-4, 
+  #certifications .carousel .row > .col-md-6 {
     flex: 0 0 auto;
     width: 100%; /* Full width for one item per row */
   }
 
-  #testimonials .carousel .row {
+  #certifications .carousel .row {
     flex-wrap: nowrap; /* Prevent wrapping */
     overflow-x: auto; /* Allow horizontal scrolling */
     -webkit-overflow-scrolling: touch; /* Smooth scrolling */
   }
 
-  #testimonials .portfolio-box {
+  #certifications .portfolio-box {
     margin: 0 auto; /* Center the items */
   }
 }
