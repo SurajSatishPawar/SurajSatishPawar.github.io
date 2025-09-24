@@ -33,12 +33,6 @@
           <li class="nav-item"><a class="nav-link" href="#contact">contact</a>
           </li>
         </ul>
-        <button type="button" class="rounded-pill btn-rounded" id="callButton">
-          +91 9011913681
-          <span>
-            <i class="fas fa-phone-alt"></i>
-          </span>
-        </button>
       </div>
     </div>
   </nav>
@@ -99,13 +93,8 @@
     </div>
     
     <div class="row align-items-center">
-      <!-- Profile Image -->
-      <div class="col-lg-5 text-center mb-4 mb-lg-0">
-        <img src="images/about_me.jpg" class="profile-img shadow-lg img-fluid rounded" alt="Profile Image">
-      </div>
-      
       <!-- About Text -->
-      <div class=" col-lg-7">
+      <div class="col-12 text-center">
         <p class="lh-base lh-base fs-5 ">
           Data Science explorer with a strong foundation in Python, Machine Learning, Deep Learning, and LLMs, backed by 
           a <strong>Master’s degree</strong>. 
@@ -342,21 +331,7 @@
   <!-- START CONTACT INFORMATION -->
   <div class="contact-section py-5"> 
     <div class="row justify-content-center">
-      <!-- Mobile Number -->
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3 contact-box pt-3 d-flex flex-column align-items-center text-center text-white" style="margin-bottom: 20px;" data-animate="flip-in">
-        <div class="contact-box__icon">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone-call" viewBox="0 0 24 24" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-            <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
-            <path d="M15 7a2 2 0 0 1 2 2" />
-            <path d="M15 3a6 6 0 0 1 6 6" />
-          </svg>
-        </div>
-        <div class="contact-box__info">
-          <a href="tel:+919011913681" class="contact-box__info--title">+91 9011913681</a>
-          <p class="contact-box__info--subtitle">Mon-Fri 9am-6pm</p>
-        </div>
-      </div>
+
 
       <!-- Email -->
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 contact-box pt-3 d-flex flex-column align-items-center text-center text-white" style="margin-bottom: 20px;" data-animate="flip-in">
@@ -445,6 +420,25 @@
 <script src="assets/js/projects.js"></script>
 <script src="assets/js/skills.js"></script>
 <script src="assets/js/certifications.js"></script>
+
+<script>
+  // Check if CV file exists
+  fetch('images/campanies/Suraj_Pawar_Resume.pdf', { method: 'HEAD' })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('File not found');
+      }
+    })
+    .catch(() => {
+      const cvButton = document.getElementById('download-cv');
+      if (cvButton) {
+        cvButton.textContent = 'CV not available';
+        cvButton.removeAttribute('href');
+        cvButton.style.pointerEvents = 'none';
+        cvButton.style.opacity = '0.6';
+      }
+    });
+</script>
   
 </body>
 </html>

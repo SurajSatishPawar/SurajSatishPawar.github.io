@@ -1,8 +1,4 @@
 
-document.getElementById('callButton').addEventListener('click', function() {
-window.location.href = 'tel:+919011913681';
-});
-    
 // For Typing Effect
 const phrases = ["AI/ML Engineer", "Data Scientist"]; 
 let currentPhraseIndex = 0; 
