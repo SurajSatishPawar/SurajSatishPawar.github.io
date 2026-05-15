@@ -47,12 +47,12 @@ document.addEventListener("DOMContentLoaded", function () {
       htmlContent += `
         <div class="col-lg-4 col-md-6">
           <div class="portfolio-box shadow" style="background-color: #f9f9f9;">
-            <img src="${cert.image}" alt="${cert.title}" title="${cert.title}" class="img-fluid">
+            <img src="${cert.image}" alt="${cert.title}" title="${cert.title}" class="img-fluid" loading="lazy">
             <div class="portfolio-info">
               <div class="caption">
                 <h4>${cert.title}</h4>
                 <p>Issued by ${cert.issuer}</p>
-                ${cert.link ? `<p><a href="${cert.link}" target="_blank" class="white-link">Click here to verify.</a></p>` : ""}
+                ${cert.link ? `<p><a href="${cert.link}" target="_blank" rel="noopener noreferrer" class="white-link">Click here to verify.</a></p>` : ""}
               </div>
             </div>
           </div>

@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="accordion-body">
               <ul style="list-style-type: square; padding-left: 20px;">
                 ${project.description.map((desc) => `<li>${desc}</li>`).join("")}
-                ${project.link ? `<li>Link: <a href="${project.link}" target="_blank">Click here to visit</a></li>` : ""}
+                ${project.link ? `<li>Link: <a href="${project.link}" target="_blank" rel="noopener noreferrer">Click here to visit</a></li>` : ""}
               </ul>
             </div>
           </div>
